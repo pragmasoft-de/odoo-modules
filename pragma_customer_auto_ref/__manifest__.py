@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "pragmasoft - Automatic Customer Number",
-    "version": "1.0",
+    "name": "Automatic Customer Number",
+    "version": "1.0.1",
     'license': 'LGPL-3',
-    'author': 'Josef Kaser',
+    'author': 'Josef Kaser, pragmasoft',
     'website': 'https://www.pragmasoft.de',
     "summary": """
     Automatically create the customer number from a sequence when a customer is being created.
