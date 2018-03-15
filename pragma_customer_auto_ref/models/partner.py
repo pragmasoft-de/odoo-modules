@@ -21,6 +21,6 @@ class ResPartner(models.Model):
     @api.model
     def create(self, vals):
         if 'customer' in vals and vals['customer']:
-            vals['ref'] = self.env['ir.sequence'].get('customer.number')
+            vals['ref'] = self.env['ir.sequence'].next_by_code('customer.number')
 
         return super(ResPartner, self).create(vals)
