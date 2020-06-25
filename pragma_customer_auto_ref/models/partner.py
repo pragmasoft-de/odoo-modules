@@ -20,7 +20,9 @@ class ResPartner(models.Model):
 
     @api.model
     def create(self, vals):
-        if 'customer' in vals and vals['customer']:
+        partner_type = self._context.get('res_partner_search_mode')
+
+        if partner_type == 'customer':
             vals['ref'] = self.env['ir.sequence'].next_by_code('customer.number')
 
         return super(ResPartner, self).create(vals)
